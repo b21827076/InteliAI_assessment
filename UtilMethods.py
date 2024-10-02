@@ -12,7 +12,7 @@ class UtilMethods:
             elif i < minimumNumber:
                 minimumNumber = i
 
-        result = "Minimum number in array: {0} \nMaximum number in array: {1}".format(minimumNumber, maximumNumber)
+        result = [minimumNumber, maximumNumber]
         return result
 
 
@@ -22,8 +22,8 @@ class UtilMethods:
         for i in self.array:
             temp += i
 
-        meanValue = format(temp/len(self.array),".2f")
-        result = "Mean value of array: {0}".format(meanValue)
+        meanValue = round(temp/len(self.array),1)
+        result = meanValue
         return result
 
     def findNearestValue(self,number):
@@ -36,12 +36,6 @@ class UtilMethods:
                 distance = newDistance
                 nearestValue = i
 
-        result = "The closest value in array to the given number: {0}".format(nearestValue)
+        result = nearestValue
         return result
 
-"""
-p1 = UtilMethods([10,60,240,60,130,70])
-print(p1.findMinAndMaxValue())
-print(p1.findMeanValue())
-print(p1.findNearestValue(200))
-"""
