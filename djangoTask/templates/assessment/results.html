@@ -1,0 +1,10 @@
+{% if usersList %}
+    <p>NAME | SURNAME | EMAIL</p>
+    <ul>
+    {% for user in usersList %}
+        <li>{{user.name}}  |  {{ user.surname }}  |  {{ user.email }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No users are available.</p>
+{% endif %}
